@@ -12,3 +12,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-content {
+    max-width: 960px;
+    width: 100%;
+}

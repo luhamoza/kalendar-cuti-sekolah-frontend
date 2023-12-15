@@ -5,7 +5,7 @@ function App() {
     const [groups, setGroups] = useState(null);
 
     useEffect(() => {
-        fetch('https://kalendar.onrender.com/holidays')
+        fetch('http://localhost:8000/holidays')
             .then(response => response.json())
             .then(data => setGroups(data))
             .catch(err => console.error(err));
@@ -20,9 +20,9 @@ function App() {
             <header className='app-header'>
                 <h1>Kalendar Cuti Sekolah</h1>
             </header>
-            <main>
+            <main className='main-content'>
                 {groups.map(group =>
-                    <div key={group.group}>
+                    <div key={group.group} className='group'>
                         <h2>Group: {group.group}</h2>
                         <p>Session: {group.session}</p>
                         <p>State: {group.state.join(', ')}</p>

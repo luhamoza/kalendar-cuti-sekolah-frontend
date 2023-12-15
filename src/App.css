@@ -1,4 +1,13 @@
-/* Existing styles */
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content {
+    max-width: 960px;
+    width: 100%;
+}
 
 .holiday-table {
     width: 100%;
@@ -16,16 +25,29 @@
     color: white;
 }
 
-/* New style for responsive table */
 
 .table-responsive {
-    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.table-wrapper {
+    max-width: 1000px;
+    width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
+    .main-content {
+        padding: 20px 40px;
+    }
+    .table-responsive {
+        overflow-x: auto;
+    }
+
     .holiday-name-cell {
-        background-color: #fff;
-        color: #242424/*Choose color you like */
+        background-color: #4CAF50;
+        color: white;
     }
     .table-responsive tbody td:before {
         content: attr(data-label);

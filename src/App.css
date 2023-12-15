@@ -1,0 +1,63 @@
+/* Existing styles */
+
+.holiday-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.holiday-table th, .holiday-table td {
+    text-align: left;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.holiday-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* New style for responsive table */
+
+.table-responsive {
+    overflow: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .holiday-name-cell {
+        background-color: #fff;
+        color: #242424/*Choose color you like */
+    }
+    .table-responsive tbody td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .holiday-table, .holiday-table thead, .holiday-table tbody, .holiday-table th, .holiday-table td, .holiday-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .holiday-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .holiday-table td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 40%;
+    }
+
+    .holiday-table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 30%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+}
